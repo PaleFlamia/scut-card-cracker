@@ -23,7 +23,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
-      - run: gcc tool.c -O2 -o ${{ matrix.out }}
+      - run: gcc scc.c -O2 -o ${{ matrix.out }}
       - uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.out }}
