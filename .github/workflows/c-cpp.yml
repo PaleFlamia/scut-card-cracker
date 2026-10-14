@@ -15,11 +15,11 @@ jobs:
       matrix:
         include:
           - os: ubuntu-latest
-            out: tool-linux
+            out: scc-linux
           - os: windows-latest
-            out: tool-windows.exe
+            out: scc-windows.exe
           - os: macos-latest
-            out: tool-macos
+            out: scc-macos
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
