@@ -122,7 +122,7 @@ You will need an Android phone with NFC support and a MIFARE Classic Tool (MCT) 
 
     sprintf(temp, "%s%s", uid_str, ".mct");
     FILE* fp_sector = fopen(temp, "wb");
-    fprintf(fp_sector, "+Sector: 1\n");
+    fprintf(fp_sector, "+Sector: 0\n");
     fprintf(fp_sector, "%08X%02X2804000000000000000000\n", uid, bcc); // uid, bcc, sak(28), atqa(0400), a constant depends on the card batch
     fprintf(fp_sector, "00000000000000000000000000000000\n");
     fprintf(fp_sector, "00000000000000000000000000000000\n");
